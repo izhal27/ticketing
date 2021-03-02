@@ -46,8 +46,8 @@ it('should returns fetches orders for a particular user', async () => {
     .expect(200);
 
   expect(res.body.length).toEqual(2);
-  expect(res.body[0].id).toEqual(orderOne.id);
-  expect(res.body[1].id).toEqual(orderTwo.id);
-  expect(res.body[0].ticket.id).toEqual(orderOne.ticket.id);
-  expect(res.body[1].ticket.id).toEqual(orderTwo.ticket.id);
+  expect(res.body[1].id).toEqual(orderOne.id);
+  expect(res.body[0].id).toEqual(orderTwo.id);
+  expect(res.body[1].ticket.id).toEqual(orderOne.ticket.id);
+  expect(res.body[0].ticket.id).toEqual(orderTwo.ticket.id);
 });
